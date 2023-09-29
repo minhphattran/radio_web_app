@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Listener</title>
+
+	<style >
+		body{
+			display: flex;
+			flex-direction: column;
+			background: rgb(30,33,36);
+		}
+		div {
+			background: rgb(66,69,73);
+			margin: 10px ;
+			
+		}
+		.nav_bar{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			height: 70px;
+		}
+		.media_bar{
+			height: 50px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.main_section{
+			display: flex;
+			flex-direction: column;
+			height: 755px;
+		}
+		.content{
+			display: flex;
+			flex-direction: row;
+			height: 100%;
+			
+		}
+
+		.foot_note{
+			border: solid;
+			border-color: rgb(30,33,36) ;
+			height: 100px;
+			margin-top: auto;
+			text-align: center;
+		}
+
+		.nav_bar_left{
+			display: flex;
+			align-items: center;
+			justify-content: stretch;
+		}
+		.nav_bar_middle{
+			display: flex;
+			align-items: center;
+			justify-content: stretch;
+		}
+		.nav_bar_right{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+		}
+		.profile{
+			padding: 10px;
+		}
+		.language{
+			padding: 10px;
+		}
+		.search{
+			padding: 10px;
+		}
+		.sub{
+			padding: 10px;
+		}
+
+		.listener{
+			padding: 10px;
+		}
+		.dj{
+			padding: 10px;
+		}
+		.producer{
+			padding: 10px;
+		}
+
+
+		.music{
+			text-align: center;
+			width: 100%;
+		}
+		.podcast{						
+			text-align: center;
+			width: 100%;
+		}
+		.news{
+			text-align: center;
+			width: 100%;
+		}
+		.suggestion{
+			text-align: center;
+			border: solid;
+			border-color: rgb(30,33,36) ;
+			width: 100%;
+		}
+
+		.music_button{
+			padding: 10px;
+			width: 100%;
+		}
+		.podcast_button{
+			padding: 10px;
+			width: 100%;
+		}
+		.news_button{
+			padding: 10px;
+			width: 100%;
+		}
+
+		.audio_control{
+			height: 70%;
+			width: 70%;
+			margin-left: auto;
+			margin-top: auto;
+			margin-bottom: auto;
+			margin-right: 10px;
+
+		}
+
+		
+	</style>
+</head>
+<body>
+	<div class = "nav_bar">	
+
+		<div class="nav_bar_left">
+			<button class="listener">Listener</button>
+			<button class="dj">DJ</button>
+			<button class="producer">Producer</button>
+		</div>
+
+
+		<div class="nav_bar_middle"> PAGE TITLE
+			
+		</div>
+
+
+		<div class="nav_bar_right"> 
+			<button class="profile">Profile</button>
+
+			<select class="language" name="language" id="language">
+    			<option value="english">English</option>
+  				<option value="spanish">Espanol</option>
+  				<option value="french">French</option>
+			</select> 
+
+			<form>
+				<input class="search" type="text" id="search" name="search">
+				<input class="sub" type="submit" value="Submit">
+			</form>
+		</div>
+
+	</div>
+
+	<div class = "media_bar">
+		<audio controls class="audio_control">
+			<source src="mck.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+
+	<div class = "main_section">
+
+		<div class="content">
+			<div class="music">
+				<button class="music_button">Music</button>
+			</div>
+
+			<div class="podcast">
+				<button class="podcast_button">Podcast</button>
+			</div>
+
+			<div class="news">
+				<button class="news_button">News</button>
+			</div>
+
+			<div class="suggestion">Suggestion
+			</div>			
+		</div>
+
+		<div class = "foot_note"> Footnote			
+		</div>	
+	</div>
+
+	
+</body>
+</html>
