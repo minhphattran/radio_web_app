@@ -91,6 +91,10 @@
 		.music{
 			text-align: center;
 			width: 100%;
+			display: flex;
+			flex-direction: column;
+
+
 		}
 		.podcast{						
 			text-align: center;
@@ -129,7 +133,38 @@
 			margin-right: 10px;
 
 		}
+		.songs{
+			height: 100%;
+			display: grid;
+			gap: 10px
+		}
 
+		
+		
+
+		img{
+			height: 50px;
+			width: 50px;
+			justify-self: start;
+			align-self: center;
+		}
+
+		.songs div{
+			height: 100%;
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+
+
+		}
+		.songs div:hover{
+			background-color: rgb(125,125,125);
+		}
+		.songs div h2{
+			
+		}
 		
 	</style>
 </head>
@@ -176,6 +211,36 @@
 		<div class="content">
 			<div class="music">
 				<button class="music_button">Music</button>
+				<div class="songs">
+					<div>
+						<img src="joji.jpg">
+						<h2>Song1</h2>
+						<p>by Singer1</p>
+					</div>
+
+					<div>
+						<img src="joji.jpg">
+						<h2>Song1</h2>
+						<p>by Singer1</p>
+					</div>
+					<div>
+						<img src="joji.jpg">
+						<h2>Song1</h2>
+						<p>by Singer1</p>
+					</div>
+					<div>
+						<img src="joji.jpg">
+						<h2>Song1</h2>
+						<p>by Singer1</p>
+					</div>
+					<div>
+						<img src="joji.jpg">
+						<h2>Song1</h2>
+						<p>by Singer1</p>
+					</div>
+
+				</div>
+
 			</div>
 
 			<div class="podcast">
