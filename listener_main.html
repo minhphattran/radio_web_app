@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Listener</title>
+	<title>Listener_main</title>
 
 	<style >
 		body{
@@ -11,24 +11,26 @@
 			flex-direction: column;
 			background: rgb(30,33,36);
 		}
+
 		div {
-			background: rgb(66,69,73);
 			margin: 10px ;
-			
 		}
 		.nav_bar{
+			background: rgb(66,69,73);
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
 			height: 70px;
 		}
 		.media_bar{
+			background: rgb(66,69,73);
 			height: 50px;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
 		}
 		.main_section{
+			background: rgb(66,69,73);
 			display: flex;
 			flex-direction: column;
 			height: 755px;
@@ -41,11 +43,10 @@
 		}
 
 		.foot_note{
-			border: solid;
-			border-color: rgb(30,33,36) ;
-			height: 100px;
-			margin-top: auto;
 			text-align: center;
+			background: rgb(66,69,73);
+			height: 100px;
+			
 		}
 
 		.nav_bar_left{
@@ -88,7 +89,7 @@
 		}
 
 
-		.music{
+		.category-container{
 			text-align: center;
 			width: 100%;
 			display: flex;
@@ -99,7 +100,10 @@
 		.podcast{						
 			text-align: center;
 			width: 100%;
+			display: flex;
+			flex-direction: column;
 		}
+
 		.news{
 			text-align: center;
 			width: 100%;
@@ -111,18 +115,11 @@
 			width: 100%;
 		}
 
-		.music_button{
+		.category-button{
 			padding: 10px;
 			width: 100%;
 		}
-		.podcast_button{
-			padding: 10px;
-			width: 100%;
-		}
-		.news_button{
-			padding: 10px;
-			width: 100%;
-		}
+		
 
 		.audio_control{
 			height: 70%;
@@ -133,13 +130,44 @@
 			margin-right: 10px;
 
 		}
-		.songs{
+		.category-contents{
 			height: 100%;
-			display: grid;
-			gap: 10px
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			
+		}
+
+		.category-contents>div{
+			display: flex;
+			padding: 2px;
 		}
 
 		
+
+		.category-content h2, .category-content p{
+			margin: 0;
+		}
+
+		.category-content h2{
+			letter-spacing: 1px;
+		}
+
+
+		.suggestion{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+		.suggestion div div{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
+		.suggestion button{
+			margin-top: auto;
+			margin-bottom: auto;
+		}
 		
 
 		img{
@@ -149,22 +177,11 @@
 			align-self: center;
 		}
 
-		.songs div{
-			height: 100%;
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: space-around;
-
-
-		}
-		.songs div:hover{
+		.category-contents>div:hover{
 			background-color: rgb(125,125,125);
 		}
-		.songs div h2{
-			
-		}
+		
+
 		
 	</style>
 </head>
@@ -209,55 +226,213 @@
 	<div class = "main_section">
 
 		<div class="content">
-			<div class="music">
-				<button class="music_button">Music</button>
-				<div class="songs">
+			<div class="category-container">
+				<button class="category-button">Music</button>
+				<div class="category-contents">
 					<div>
 						<img src="joji.jpg">
-						<h2>Song1</h2>
-						<p>by Singer1</p>
+						<div class="category-content">
+							<p><b>Song 1</b></p>
+							<p>by Singer 1</p>
+						</div>
 					</div>
 
 					<div>
 						<img src="joji.jpg">
-						<h2>Song1</h2>
-						<p>by Singer1</p>
+						<div class="category-content">
+							<p><b>Song 2</b></p>
+							<p>by Singer 2</p>
+						</div>
 					</div>
 					<div>
 						<img src="joji.jpg">
-						<h2>Song1</h2>
-						<p>by Singer1</p>
+						<div class="category-content">
+							<p><b>Song 3</b></p>
+							<p>by Singer 3</p>
+						</div>
 					</div>
 					<div>
 						<img src="joji.jpg">
-						<h2>Song1</h2>
-						<p>by Singer1</p>
+						<div class="category-content">
+							<p><b>Song 4</b></p>
+							<p>by Singer 4</p>
+						</div>
 					</div>
 					<div>
 						<img src="joji.jpg">
-						<h2>Song1</h2>
-						<p>by Singer1</p>
+						<div class="category-content">
+							<p><b>Song 5</b></p>
+							<p>by Singer 5</p>
+						</div>
 					</div>
+					<div>
+						<img src="joji.jpg">
+						<div class="category-content">
+							<p><b>Song 6</b></p>
+							<p>by Singer 6</p>
+						</div>
+					</div>
+					
 
 				</div>
 
 			</div>
 
-			<div class="podcast">
-				<button class="podcast_button">Podcast</button>
+			<div class="category-container">
+				<button class="category-button">Podcast</button>
+				<div class="category-contents">
+					<div>
+						<img src="podcast_icon.jpg">
+						<div class="category-content">
+							<p><b>Podcast 1</b></p>
+							<p>by Host 1</p>
+						</div>
+					</div>
+
+					<div>
+						<img src="podcast_icon.jpg">
+						<div class="category-content">
+							<p><b>Podcast 2</b></p>
+							<p>by Host 2</p>
+						</div>
+					</div>
+					<div>
+						<img src="podcast_icon.jpg">
+						<div class="category-content">
+							<p><b>Podcast 3</b></p>
+							<p>by Host 3</p>
+						</div>
+					</div>
+					<div>
+						<img src="podcast_icon.jpg">
+						<div class="category-content">
+							<p><b>Podcast 4</b></p>
+							<p>by Host 4</p>
+						</div>
+					</div>
+					<div>
+						<img src="podcast_icon.jpg">
+						<div class="category-content">
+							<p><b>Podcast 5</b></p>
+							<p>by Host 5</p>
+						</div>
+					</div>
+					<div>
+						<img src="podcast_icon.jpg">
+						<div class="category-content">
+							<p><b>Podcast 6</b></p>
+							<p>by Host 6</p>
+						</div>
+					</div>
+
+				</div>
 			</div>
 
-			<div class="news">
-				<button class="news_button">News</button>
+			<div class="category-container">
+				<button class="category-button">News</button>
+				<div class="category-contents">
+					<div>
+						<img src="news_icon.jpg">
+						<div class="category-content">
+							<p><b>News 1</b></p>
+						</div>
+					</div>
+
+					<div>
+						<img src="news_icon.jpg">
+						<div class="category-content">
+							<p><b>News 2</b></p>
+						</div>
+					</div>
+					<div>
+						<img src="news_icon.jpg">
+						<div class="category-content">
+							<p><b>News 3</b></p>
+						</div>
+					</div>
+					<div>
+						<img src="news_icon.jpg">
+						<div class="category-content">
+							<p><b>News 4</b></p>
+						</div>
+					</div>
+					<div>
+						<img src="news_icon.jpg">
+						<div class="category-content">
+							<p><b>News 5</b></p>
+						</div>
+					</div>
+					<div>
+						<img src="news_icon.jpg">
+						<div class="category-content">
+							<p><b>News 6</b></p>
+						</div>
+					</div>
+
+
+				</div>
 			</div>
 
-			<div class="suggestion">Suggestion
+			<div class="suggestion"> <b>Suggestion</b>
+				<div>
+					<div>
+						<p>Sugestion 1</p>
+						<button type="button">O</button>
+						<button type="button">X</button>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p>Sugestion 2</p>
+						<button type="button">O</button>
+						<button type="button">X</button>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p>Sugestion 3</p>
+						<button type="button">O</button>
+						<button type="button">X</button>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p>Sugestion 4</p>
+						<button type="button">O</button>
+						<button type="button">X</button>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p>Sugestion 5</p>
+						<button type="button">O</button>
+						<button type="button">X</button>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p>Sugestion 6</p>
+						<button type="button">O</button>
+						<button type="button">X</button>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p>Sugestion 7</p>
+						<button type="button">O</button>
+						<button type="button">X</button>
+					</div>
+				</div>
+				
+			
 			</div>			
 		</div>
 
-		<div class = "foot_note"> Footnote			
-		</div>	
+	
 	</div>
+
+			<div class = "foot_note"> Footnote			
+			</div>
 
 	
 </body>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Listener_podcast/news</title>
+
+	<style >
+		body{
+			display: flex;
+			flex-direction: column;
+			background: rgb(30,33,36);
+		}
+
+		div {
+			margin: 10px ;
+		}
+		.nav_bar{
+			background: rgb(66,69,73);
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			height: 70px;
+		}
+		.media_bar{
+			background: rgb(66,69,73);
+			height: 50px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.main_section{
+			background: rgb(66,69,73);
+			display: flex;
+			flex-direction: row;
+			height: 755px;
+			justify-content: space-around;
+		}
+		.content{
+			display: flex;
+			flex-direction: row;
+			height: 100%;
+			
+		}
+
+		.foot_note{
+			text-align: center;
+			background: rgb(66,69,73);
+			height: 100px;
+			
+		}
+
+		.nav_bar_left{
+			display: flex;
+			align-items: center;
+			justify-content: stretch;
+		}
+		.nav_bar_middle{
+			display: flex;
+			align-items: center;
+			justify-content: stretch;
+		}
+		.nav_bar_right{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+		}
+		.profile{
+			padding: 10px;
+		}
+		.language{
+			padding: 10px;
+		}
+		.search{
+			padding: 10px;
+		}
+		.sub{
+			padding: 10px;
+		}
+
+		.listener{
+			padding: 10px;
+		}
+		.dj{
+			padding: 10px;
+		}
+		.producer{
+			padding: 10px;
+		}
+
+
+		.category-container{
+			text-align: center;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+
+
+		}
+		
+		
+
+		.audio_control{
+			height: 70%;
+			width: 70%;
+			margin-left: auto;
+			margin-top: auto;
+			margin-bottom: auto;
+			margin-right: 10px;
+		}
+
+		
+		
+
+		img{
+			height: 50px;
+			width: 50px;
+			justify-self: start;
+			align-self: center;
+		}
+
+		.category-contents>div:hover{
+			background-color: rgb(125,125,125);
+		}
+		
+		.charts {
+			flex: auto;
+			width: 45%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
+		.charts div{
+			flex:auto;
+			display: flex;
+			flex-direction: column;
+			
+			font-weight: bold;
+			text-align: center;
+
+		}
+		.charts div div{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
+
+
+		.charts div div:hover{
+			background-color: rgb(125,125,125);
+		}
+
+		
+	</style>
+</head>
+<body>
+	<div class = "nav_bar">	
+
+		<div class="nav_bar_left">
+			<button class="listener">Listener</button>
+			<button class="dj">DJ</button>
+			<button class="producer">Producer</button>
+		</div>
+
+
+		<div class="nav_bar_middle"> PAGE TITLE
+			
+		</div>
+
+
+		<div class="nav_bar_right"> 
+			<button class="profile">Profile</button>
+
+			<select class="language" name="language" id="language">
+    			<option value="english">English</option>
+  				<option value="spanish">Espanol</option>
+  				<option value="french">French</option>
+			</select> 
+
+			<form>
+				<input class="search" type="text" id="search" name="search">
+				<input class="sub" type="submit" value="Submit">
+			</form>
+		</div>
+
+	</div>
+
+	<div class = "media_bar">
+		<audio controls class="audio_control">
+			<source src="mck.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+
+	<div class = "main_section">
+		<div class="charts">
+			<div>
+				<h2>Popular/Politics</h2>
+				<div>
+						
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 1</b></p>
+							
+						</div>
+				</div>
+				<div>
+						
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 2</b></p>
+							
+						</div>
+				</div>
+				<div>
+						
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 3</b></p>
+							
+						</div>
+				</div>
+				<div>
+						
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 4</b></p>
+							
+						</div>
+				</div>
+				<div>
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 5</b></p>
+							
+						</div>
+				</div>
+				<div>
+						
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 6</b></p>
+							
+						</div>
+				</div>
+				<div>
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 7</b></p>
+							
+						</div>
+				</div>
+			</div>
+			<div>
+				<h2>Sports/Features</h2>
+				<div>
+						
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 1</b></p>
+							
+						</div>
+				</div>
+				<div>	
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 2</b></p>
+							
+						</div>
+				</div>
+				<div>
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 3</b></p>
+							
+						</div>
+				</div>
+				<div>
+
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 4</b></p>
+							
+						</div>
+				</div>
+				<div>
+						
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 5</b></p>
+							
+						</div>
+				</div>
+				<div>
+						
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 6</b></p>
+							
+						</div>
+				</div>
+				<div>
+						
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 7</b></p>
+							
+						</div>
+				</div>
+			</div>
+			<div> 
+				<h2>Recent/Entertainment</h2>
+				<div>
+						
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 1</b></p>
+							
+						</div>
+				</div>
+				<div>
+					
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 2</b></p>
+							
+						</div>
+				</div>
+				<div>
+						
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 3</b></p>
+							
+						</div>
+				</div>
+				<div>
+						
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 4</b></p>
+							
+						</div>
+				</div>
+				<div>
+						
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 5</b></p>
+							
+						</div>
+				</div>
+				<div>
+						
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 6</b></p>
+							
+						</div>
+				</div>
+				<div>
+						
+						<div class="category-content">
+							<img src="podcast_icon.jpg">
+							<img src="news_icon.jpg">
+							<p><b>Podcast/News 7</b></p>
+							
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			<div class = "foot_note"> Footnote			
+			</div>
+
+	
+</body>
+</html>
