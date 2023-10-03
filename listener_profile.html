@@ -5,88 +5,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Listener_profile</title>
 
-	<style >
-		body{
-			display: flex;
-			flex-direction: column;
-			background: rgb(30,33,36);
-		}
+	<link rel="stylesheet" type="text/css" href="listener.css">
 
-		div {
-			margin: 10px ;
-		}
-		.nav_bar{
-			background: rgb(66,69,73);
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			height: 70px;
-		}
-		.media_bar{
-			background: rgb(66,69,73);
-			height: 50px;
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-		}
+
+	<style >
 		.main_section{
 			background: rgb(66,69,73);
 			display: flex;
 			flex-direction: row;
 			height: 755px;
 			justify-content: space-around;
-		}
-		.content{
-			display: flex;
-			flex-direction: row;
-			height: 100%;
-			
-		}
-
-		.foot_note{
-			text-align: center;
-			background: rgb(66,69,73);
-			height: 100px;
-			
-		}
-
-		.nav_bar_left{
-			display: flex;
-			align-items: center;
-			justify-content: stretch;
-		}
-		.nav_bar_middle{
-			display: flex;
-			align-items: center;
-			justify-content: stretch;
-		}
-		.nav_bar_right{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			
-		}
-		.profile{
-			padding: 10px;
-		}
-		.language{
-			padding: 10px;
-		}
-		.search{
-			padding: 10px;
-		}
-		.sub{
-			padding: 10px;
-		}
-
-		.listener{
-			padding: 10px;
-		}
-		.dj{
-			padding: 10px;
-		}
-		.producer{
-			padding: 10px;
 		}
 
 
@@ -139,7 +67,7 @@
 	</style>
 </head>
 <body>
-	<div class = "nav_bar">	
+	<nav class = "nav_bar">	
 
 		<div class="nav_bar_left">
 			<button class="listener">Listener</button>
@@ -168,7 +96,7 @@
 			</form>
 		</div>
 
-	</div>
+	</nav>
 
 	<div class = "media_bar">
 		<audio controls class="audio_control">
@@ -176,7 +104,7 @@
 		</audio>
 	</div>
 
-	<div class = "main_section">
+	<main class = "main_section">
 		<div>
 			<img src="user_icon.jpg">
 		</div>
@@ -190,10 +118,10 @@
 		</div>
 	
 	
-	</div>
+	</main>
 
-			<div class = "foot_note"> Footnote			
-			</div>
+			<footer class = "foot_note"> Footnote			
+			</footer>
 
 	
 </body>
