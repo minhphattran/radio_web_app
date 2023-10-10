@@ -87,6 +87,7 @@
 		.suggestion button{
 			margin-top: auto;
 			margin-bottom: auto;
+			display: block;
 		}
 		
 
@@ -104,12 +105,24 @@
 
 		
 	</style>
+	------------------------------------------------------------------
+	<script>
+		function validateForm() {
+		  var x = document.forms["myForm"]["search"].value;
+		  if (x == "" || x == null) {
+		    alert("Please enter keywords.");
+		    return false;
+		  }
+		}
+
+		
+	</script>
 </head>
 <body>
 	<nav class = "nav_bar">	
 
 		<div class="nav_bar_left">
-			<button class="listener">Listener</button>
+			<button class="listener" onclick="window.location.href='listener_main.html'">Listener</button>
 			<button class="dj">DJ</button>
 			<button class="producer">Producer</button>
 		</div>
@@ -121,7 +134,7 @@
 
 
 		<div class="nav_bar_right"> 
-			<button class="profile">Profile</button>
+			<button onclick="window.location.href='listener_profile.html'" class="profile" >Profile</button>
 
 			<select class="language" name="language" id="language">
     			<option value="english">English</option>
@@ -129,7 +142,7 @@
   				<option value="french">French</option>
 			</select> 
 
-			<form>
+			<form name = myForm action="" onsubmit="return validateForm()" method="post" required>
 				<input class="search" type="text" id="search" name="search">
 				<input class="sub" type="submit" value="Submit">
 			</form>
@@ -147,7 +160,7 @@
 
 		<div class="content">
 			<div class="category-container">
-				<button class="category-button">Music</button>
+				<button onclick="window.location.href='listener_music.html'" class="category-button">Music</button>
 				<div class="category-contents">
 					<div>
 						<img src="joji.jpg">
@@ -199,7 +212,7 @@
 			</div>
 
 			<div class="category-container">
-				<button class="category-button">Podcast</button>
+				<button onclick="window.location.href='listener_podcast.html'" class="category-button">Podcast</button>
 				<div class="category-contents">
 					<div>
 						<img src="podcast_icon.jpg">
@@ -249,7 +262,7 @@
 			</div>
 
 			<div class="category-container">
-				<button class="category-button">News</button>
+				<button onclick="window.location.href='listener_news.html'" class="category-button">News</button>
 				<div class="category-contents">
 					<div>
 						<img src="news_icon.jpg">
@@ -299,8 +312,8 @@
 					<div>
 						<div>
 							<p>Sugestion </p>
-							<button type="button">O</button>
-							<button type="button">X</button>
+							<button class="o" >O</button>
+							<button class="x" type="button">X</button>
 						</div>
 					</div>
 				</li>
@@ -308,8 +321,8 @@
 					<div>
 						<div>
 							<p>Sugestion </p>
-							<button type="button">O</button>
-							<button type="button">X</button>
+							<button class="o" >O</button>
+							<button class="x" type="button">X</button>
 						</div>
 					</div>
 				</li>
@@ -317,8 +330,8 @@
 					<div>
 						<div>
 							<p>Sugestion </p>
-							<button type="button">O</button>
-							<button type="button">X</button>
+							<button class="o" >O</button>
+							<button class="x" type="button">X</button>
 						</div>
 					</div>
 				</li>
@@ -326,8 +339,8 @@
 					<div>
 						<div>
 							<p>Sugestion </p>
-							<button type="button">O</button>
-							<button type="button">X</button>
+							<button class="o" >O</button>
+							<button class="x" type="button">X</button>
 						</div>
 					</div>
 				</li>
@@ -335,8 +348,8 @@
 					<div>
 						<div>
 							<p>Sugestion </p>
-							<button type="button">O</button>
-							<button type="button">X</button>
+							<button class="o" >O</button>
+							<button class="x" type="button">X</button>
 						</div>
 					</div>
 				</li>
@@ -344,8 +357,8 @@
 					<div>
 						<div>
 							<p>Sugestion </p>
-							<button type="button">O</button>
-							<button type="button">X</button>
+							<button class="o" >O</button>
+							<button class="x" type="button">X</button>
 						</div>
 					</div>
 				</li>
@@ -353,8 +366,8 @@
 					<div>
 						<div>
 							<p>Sugestion </p>
-							<button type="button">O</button>
-							<button type="button">X</button>
+							<button class="o" >O</button>
+							<button class="x" type="button">X</button>
 						</div>
 					</div>
 				</li>
@@ -362,8 +375,8 @@
 					<div>
 						<div>
 							<p>Sugestion </p>
-							<button type="button">O</button>
-							<button type="button">X</button>
+							<button class="o" >O</button>
+							<button class="x" type="button">X</button>
 						</div>
 					</div>
 				</li>
@@ -371,8 +384,8 @@
 					<div>
 						<div>
 							<p>Sugestion </p>
-							<button type="button">O</button>
-							<button type="button">X</button>
+							<button class="o" >O</button>
+							<button class="x" type="button">X</button>
 						</div>
 					</div>
 				</li>
@@ -380,16 +393,40 @@
 					<div>
 						<div>
 							<p>Sugestion </p>
-							<button type="button">O</button>
-							<button type="button">X</button>
+							<button class="o" >O</button>
+							<button class="x" type="button">X</button>
 						</div>
 					</div>
 				</li>
+				
+
+				
 
 				
 			</ol>
 				
-			
+			<script >
+				const obuttons = document.querySelectorAll(".o");
+				const xbuttons = document.querySelectorAll(".x");
+
+				for (let i = 0; i <obuttons.length; i++){
+					obuttons[i].addEventListener("click", function() {
+			  		alert("I like this song!");
+					});
+				}
+
+				for (let i = 0; i <xbuttons.length; i++){
+					xbuttons[i].addEventListener("click", function() {
+			  		alert("I don't like this song!");
+					});
+				}
+
+				
+				
+
+				
+
+			</script>
 			</div>			
 		</div>
 
