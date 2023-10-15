@@ -111,17 +111,7 @@
 		
 	</style>
 	------------------------------------------------------------------
-	<script>
-		function validateForm() {
-		  var x = document.forms["myForm"]["search"].value;
-		  if (x == "" || x == null) {
-		    alert("Please enter keywords.");
-		    return false;
-		  }
-		}
-
-		
-	</script>
+	
 </head>
 <body>
 	<nav class = "nav_bar">	
@@ -167,7 +157,7 @@
 			<div class="category-container">
 				<button onclick="window.location.href='listener_music.html'" class="category-button">Music</button>
 				<div class="category-contents">
-					<div>
+					<div class="song">
 						<img src="joji.jpg">
 						<div class="category-content">
 							<p><b>Song 1</b></p>
@@ -175,28 +165,28 @@
 						</div>
 					</div>
 
-					<div>
+					<div class="song">
 						<img src="joji.jpg">
 						<div class="category-content">
 							<p><b>Song 2</b></p>
 							<p>by Singer 2</p>
 						</div>
 					</div>
-					<div>
+					<div class="song">
 						<img src="joji.jpg">
 						<div class="category-content">
 							<p><b>Song 3</b></p>
 							<p>by Singer 3</p>
 						</div>
 					</div>
-					<div>
+					<div class="song">
 						<img src="joji.jpg">
 						<div class="category-content">
 							<p><b>Song 4</b></p>
 							<p>by Singer 4</p>
 						</div>
 					</div>
-					<div>
+					<div class="song">
 						<img src="joji.jpg">
 						<div class="category-content">
 							<p><b>Song 5</b></p>
@@ -467,6 +457,8 @@
 			<script >
 				window.onload = function(){
 					setupLikeButtons();
+					song();
+
 				}
 
 				function setupLikeButtons(){
@@ -492,11 +484,22 @@
 					}
 
 				}
-				
-				
-				
-
-				
+				function validateForm() {
+				  var x = document.forms["myForm"]["search"].value;
+				  if (x == "" || x == null) {
+				    alert("Please enter keywords.");
+				    return false;
+				  }
+				}
+				function song(){
+					const songs = document.querySelectorAll(".category-contents>div");
+					for(let i = 0; i < songs.length; i++){
+						songs[i].addEventListener("click", function(){
+							window.location.href='mck.mp3'
+						});
+					}
+				}
+		
 
 			</script>
 			</div>			

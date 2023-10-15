@@ -108,7 +108,7 @@
   				<option value="french">French</option>
 			</select> 
 
-			<form>
+			<form name = myForm action="" onsubmit="return validateForm()" method="post" required>
 				<input class="search" type="text" id="search" name="search">
 				<input class="sub" type="submit" value="Submit">
 			</form>
@@ -125,8 +125,6 @@
 	<main class="main_section">
 		<div>
 			<img src="./listener_profile_files/user_icon.jpg">
-
-			<button id="edit"  style="height: 30px; width: 100px; margin-left: auto; margin-right: auto; margin-top: 20px;">Edit</button>
 
 		</div>
 
@@ -149,7 +147,7 @@
 
 			info.innerHTML = displayInfo();
 
-			edit.addEventListener('click', editUser);
+			
 			const elems = document.querySelectorAll(".edit-info-button");
 
 			for(let i =0; i<elems.length; i++){
@@ -159,14 +157,7 @@
 			}
 			
 
-			function editUser() {
-				user.firstName = "Alex"
-				user.lastName = "Sandra"
-				user.dob = "2/2/2002"
-				user.email = "email@sample.com"
-				user.phoneNum = "(703) 111-4567"
-				document.getElementById("info").innerHTML = displayInfo();
-			}
+			
 
 
 			function displayInfo(){
@@ -230,6 +221,20 @@
 					spans[1].innerHTML = result;
 				}
 			}
+
+
+				
+			
+			function validateForm() {
+			  var x = document.forms["myForm"]["search"].value;
+			  if (x == "" || x == null) {
+			    alert("Please enter keywords.");
+			    return false;
+			  }
+			}
+	
+
+			
 
 	</script>
 	</main>

@@ -98,11 +98,11 @@
 			font-weight: bold;
 		}
 
-		.genres div div:hover{
+		.genres>div>div:hover{
 			background-color: rgb(125,125,125);
 		}
 
-		.charts div div:hover{
+		.charts>div>div:hover{
 			background-color: rgb(125,125,125);
 		}
 
@@ -133,7 +133,7 @@
   				<option value="french">French</option>
 			</select> 
 
-			<form>
+			<form name = myForm action="" onsubmit="return validateForm()" method="post" required>
 				<input class="search" type="text" id="search" name="search">
 				<input class="sub" type="submit" value="Submit">
 			</form>
@@ -349,7 +349,40 @@
 			</div>
 			<p><b>GENRES</b></p>
 		</div>
-	
+		
+
+			<script >
+				
+				window.onload = function(){
+					chart();
+					genre();
+				}
+
+				function validateForm() {
+				  var x = document.forms["myForm"]["search"].value;
+				  if (x == "" || x == null) {
+				    alert("Please enter keywords.");
+				    return false;
+				  }
+				}
+
+				function chart(){
+					const chart = document.querySelectorAll(".charts>div>div");
+					for(let i = 0; i < chart.length; i++){
+						chart[i].addEventListener("click", function(){alert("clicked")});
+						console.log(i);
+					}
+				}
+				function genre(){
+					const genre = document.querySelectorAll(".genres>div>div");
+					for(let i = 0; i < genre.length; i++){
+						genre[i].addEventListener("click", function(){alert("clicked")});
+						console.log(i);
+					}
+				}
+		
+
+			</script>
 	
 	</main>
 
